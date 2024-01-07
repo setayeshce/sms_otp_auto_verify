@@ -50,8 +50,8 @@ class TextFieldPin extends StatelessWidget {
                 ? Align(
                     alignment: Alignment.center,
                     child: Container(
-                        height: defaultBoxSizew,
-                        width: defaultBoxSizeh,
+                        height: defaultBoxSizeh,
+                        width: defaultBoxSizew,
                         decoration: defaultDecoration),
                   )
                 : Container(),
