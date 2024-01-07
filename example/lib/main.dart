@@ -90,8 +90,8 @@ class _MyAppState extends State<MyApp> {
         _enableButton = false;
       });
 
-      _scaffoldKey.currentState?.showSnackBar(
-          SnackBar(content: Text("Verification OTP Code $_otpCode Success")));
+      // _scaffoldKey.currentState?.showSnackBar(
+      //     SnackBar(content: Text("Verification OTP Code $_otpCode Success")));
     });
   }
 
@@ -116,7 +116,8 @@ class _MyAppState extends State<MyApp> {
                       autoFocus: true,
                       codeLength: _otpCodeLength,
                       alignment: MainAxisAlignment.center,
-                      defaultBoxSize: 46.0,
+                      defaultBoxSizew: 46.0,
+                      defaultBoxSizeh: 46.0,
                       margin: 10,
                       selectedBoxSize: 46.0,
                       textStyle: TextStyle(fontSize: 16),
