@@ -30,7 +30,7 @@ class TextFieldPin extends StatelessWidget {
     this.selectedDecoration,
     this.autoFocus = false,
     this.alignment = MainAxisAlignment.center, textController,
-  })  : this.textController =textController?? new TextEditingController(),this.selectedBoxSize = selectedBoxSize ?? defaultBoxSizew,
+  })  : this.textController =textController?? new TextEditingController(),this.selectedBoxSize =  defaultBoxSizew,
         this.defaultDecoration = defaultDecoration ??
             BoxDecoration(
               border: Border.all(color: Colors.black),
@@ -58,8 +58,8 @@ class TextFieldPin extends StatelessWidget {
             textController.text.length >= i
                 ? Container(
                     decoration: selectedDecoration,
-                    width: selectedBoxSize,
-                    height: selectedBoxSize,
+                    width: defaultBoxSizew,
+                    height: defaultBoxSizeh,
                     child: Center(
                       child: Text(
                         textController.text[i - 1],
@@ -82,9 +82,8 @@ class TextFieldPin extends StatelessWidget {
         children: [
           Container(
             width: MediaQuery.of(context).size.width,
-            height: defaultBoxSizeh >= selectedBoxSize
-                ? defaultBoxSizeh
-                : selectedBoxSize,
+            height: defaultBoxSizeh
+               ,
             child: Row(
               mainAxisAlignment: alignment,
               children: getField(),
