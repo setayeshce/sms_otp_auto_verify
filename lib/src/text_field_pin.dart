@@ -6,7 +6,8 @@ import 'package:flutter/services.dart';
 class TextFieldPin extends StatelessWidget {
 
   final Function(String) onChange;
-  final double defaultBoxSize;
+  final double  defaultBoxSizeh;
+  final double  defaultBoxSizew;
   final double selectedBoxSize;
   final BoxDecoration? defaultDecoration;
   final int codeLength;
@@ -19,7 +20,8 @@ class TextFieldPin extends StatelessWidget {
 
   TextFieldPin({
     required this.onChange,
-    required this.defaultBoxSize,
+    required this.defaultBoxSizeh,
+    required this.defaultBoxSizew,
     defaultDecoration,
     selectedBoxSize,
     this.codeLength = 5,
@@ -48,8 +50,8 @@ class TextFieldPin extends StatelessWidget {
                 ? Align(
                     alignment: Alignment.center,
                     child: Container(
-                        height: defaultBoxSize,
-                        width: defaultBoxSize,
+                        height: defaultBoxSizew,
+                        width: defaultBoxSizeh,
                         decoration: defaultDecoration),
                   )
                 : Container(),
@@ -80,8 +82,8 @@ class TextFieldPin extends StatelessWidget {
         children: [
           Container(
             width: MediaQuery.of(context).size.width,
-            height: defaultBoxSize >= selectedBoxSize
-                ? defaultBoxSize
+            height: defaultBoxSizeh >= selectedBoxSize
+                ? defaultBoxSizeh
                 : selectedBoxSize,
             child: Row(
               mainAxisAlignment: alignment,
