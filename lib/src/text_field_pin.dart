@@ -30,7 +30,7 @@ class TextFieldPin extends StatelessWidget {
     this.selectedDecoration,
     this.autoFocus = false,
     this.alignment = MainAxisAlignment.center, textController,
-  })  : this.textController =textController?? new TextEditingController(),this.selectedBoxSize = selectedBoxSize ?? defaultBoxSize,
+  })  : this.textController =textController?? new TextEditingController(),this.selectedBoxSize = selectedBoxSize ?? defaultBoxSizew,
         this.defaultDecoration = defaultDecoration ??
             BoxDecoration(
               border: Border.all(color: Colors.black),
